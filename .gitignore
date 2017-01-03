@@ -1,0 +1,8 @@
+# Dependency directories
+/node_modules/
+
+# Compiled binary addons
+/dist/
+
+#webstorm settings
+/.idea/
