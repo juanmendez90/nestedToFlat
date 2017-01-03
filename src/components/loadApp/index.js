@@ -7,7 +7,7 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import injectTapEventPlugin from "react-tap-event-plugin";
 import RaisedButton from 'material-ui/RaisedButton';
 
-import styles from "./loadApp.css"
+import styles from "./loadApp.scss"
 
 const MUICustomStyles = {
     textField: {
@@ -75,11 +75,13 @@ export default class App extends React.Component {
                         onChange={this.handleChange}
                         errorText={this.mobxState.error}
                         errorStyle={MUICustomStyles.textField.errorStyle}
+                        ref="textField"
                     />
-                    <RaisedButton className={styles.button} label="Flat array" primary onTouchTap={this.handleClick}/>
+                    <RaisedButton ref="button" className={styles.button} label="Flat array" primary
+                                  onTouchTap={this.handleClick}/>
                     <h3>Result: </h3>
-                    <p>Entry: {JSON.stringify(this.mobxState.nestedArray)}</p>
-                    <p>Result: {JSON.stringify(this.mobxState.flatArray)}</p>
+                    <p>Entry: ,<b ref="entry" >{JSON.stringify(this.mobxState.nestedArray)}</b></p>
+                    <p>Result: <b ref="result" >{JSON.stringify(this.mobxState.flatArray)}</b></p>
                 </div>
             </MuiThemeProvider>
         </div>)

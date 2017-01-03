@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "This app will flatten an array of arbitrarily nested arrays of integers into a flat array of integers. e.g. [[1,2,[3]],4] -> [1,2,3,4]",
   "scripts": {
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "test": "mocha --compilers js:babel-core/register,js:./test/cssModulesCompiler.js --require ./test/testHelper.js \"test/*@(.js)\" --watch --watch-extensions js"
   },
   "author": "Juan Diego Mendez",
   "devDependencies": {
@@ -22,9 +23,14 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-1": "^6.5.0",
+    "chai": "^3.5.0",
     "css-loader": "^0.26.1",
+    "css-modules-require-hook": "^4.0.5",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.25.0",
+    "jsdom": "^9.9.1",
+    "node-sass": "^4.1.1",
+    "react-addons-test-utils": "^15.4.1",
     "style-loader": "^0.12.3",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
