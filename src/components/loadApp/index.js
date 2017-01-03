@@ -80,7 +80,7 @@ export default class App extends React.Component {
                     <RaisedButton ref="button" className={styles.button} label="Flat array" primary
                                   onTouchTap={this.handleClick}/>
                     <h3>Result: </h3>
-                    <p>Entry: ,<b ref="entry" >{JSON.stringify(this.mobxState.nestedArray)}</b></p>
+                    <p>Entry: <b ref="entry" >{JSON.stringify(this.mobxState.nestedArray)}</b></p>
                     <p>Result: <b ref="result" >{JSON.stringify(this.mobxState.flatArray)}</b></p>
                 </div>
             </MuiThemeProvider>
